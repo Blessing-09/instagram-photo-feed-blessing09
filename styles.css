@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-
 }
 *,
 *::before,
@@ -13,128 +12,120 @@ body {
     background-color: rgb(222, 222, 222);
     font-family: "Anton", sans-serif;
     font-weight: 100;
-    font-style: normal;   
+    font-style: normal;
 }
 .header {
-    position: fixed;
+    position: sticky;
     top: 0px;
     left: 0px;
     width: 100%;
-    background-color: white;
+    background-color: rgb(107, 107, 107);
+    color: white;
+    font-size: 40px;
     padding: 15px;
     text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.7);
 }
-.container1 {
-    margin: 150px 400px 50px 400px;
-    background-color: white;
-    width: 450px  
-}
-
-.container2 {
-    margin: 50px 400px;
-    background-color: white;
-    width: 450px  
+.header h1 {
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.7);
+    text-shadow: -10px -10px 15px rgba(244, 215, 108, 0.7);
 }
 
-.container3 {
-    margin: 50px 400px;
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.post {
     background-color: white;
-    width: 450px  
+    width: 450px;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ea;
 }
-
-.container4 {
-    margin: 50px 400px;
-    background-color: white;
-    width: 450px  
+.post:hover {
+    box-shadow: 1px 5px 20px black;
 }
-
 .heading {
-   display: flex;
-    padding: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
-#round {
+
+.left-elements-heading {
+    display: flex;
+    align-items: center;
+}
+.left-elements-heading h3 {
+    margin-left: 8px;
+    font-size: smaller;
+}
+
+.round {
     background-color: black;
     border: 1px solid red;
     padding: 12px;
+    border-radius: 50%;
+    display: block;
+    }
 
-    height: 20px;
-    border-radius: 200px;
-    display: inline-block;
-}
-/* round4 is to add distinctive features to the heading of the container 4 */
-#round4 {
+
+.round4 {
     background-color: white;
     border: 1px solid grey;
     padding: 12px;
+    border-radius: 50%;
+    display: block;
+} 
 
-    height: 20px;
-    border-radius: 200px;
-    display: inline-block;
-}
 
-    .tooltip {
-        position: relative;
-       
-    }
-
-        .tooltip .tooltiptext {
-            position: absolute;
-            top: -20px;
-            right: 10px;
-            visibility: hidden;
-            width: 100px;
-            background-color: white;
-            color: black;
-            text-align: center;
-            border-radius: 6px;
-            padding: 3px 1px;    
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 0.7;
-       font-size: smaller;
-       font-style: italic;
-      }
-
-.heading h3 {
-    font-size: small;
-    position: relative;
-    left: 5px;
-    bottom: -5px;
-}
-p .round {
-    position: relative;
-    left: 310px;
-    background-color: black;
+p .round-r {
+    background-color: rgb(255, 0, 0);
     padding: 3px;
     height: 5px;
     width: 5px;
-    border-radius: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    }
+
+p .round-a {
+    background-color: rgb(255, 225, 0);
+    padding: 3px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
     display: inline-block;
 }
-p.p1 {
-    position: relative;
-    left: -30px;
+p .round-g {
+    background-color: rgb(39, 218, 3);
+    padding: 3px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    display: inline-block;
 }
-p .round:hover {
-    background-color: aliceblue;
-}
-      
-.img1 img {
-    /*transition: width 1s height 1s;*/
-    border: 1px solid lightskyblue;
-    object-fit: contain;
-}
-/* .img1 img:active, :hover {
-    width: 550px;
-    height: 550px;
-} */
 
-.img2, .img3 img {
+.round-r:hover,
+.round-a:hover,
+.round-g:hover {
+    background-color: rgb(78, 78, 78);
+}
+
+.img1 img {
+    border: 1px solid lightskyblue;
+    margin-bottom: -3px;
+}
+
+.img2 img,
+.img3 img {
     object-fit: cover;
 }
-.img4 img {
+.img4 img,
+.img1 img {
     object-fit: contain;
 }
 .text {
@@ -144,7 +135,5 @@ p .round:hover {
     width: 450px;
     font-family: sans-serif !important;
     font-weight: 100 !important;
-    font-style: normal;  
+    font-style: normal;
 }
-/* Some of the codes implemented are generated as I go, through reviewing and adjusting elements where necessary */
-
